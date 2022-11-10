@@ -1,5 +1,8 @@
 version: 0.0
 os: linux
+files:
+  source: /
+  destination: /tmp/2048/
 hooks:
   BeforeInstall:
     - location: ./before_install.sh
