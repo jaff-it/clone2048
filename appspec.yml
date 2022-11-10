@@ -3,6 +3,7 @@ os: linux
 files:
   source: /
   destination: /tmp/2048/
+  file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: ./before_install.sh
