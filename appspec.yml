@@ -8,7 +8,7 @@ hooks:
   BeforeInstall:
     - location: ./before_install.sh
       timeout: 300
-      runas: root
+      runas: jenkins
 #  AfterInstall:
 #    - location: scripts/change_permissions.sh
 #      timeout: 300
