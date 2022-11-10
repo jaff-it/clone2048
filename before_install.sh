@@ -26,7 +26,7 @@ aws ecr get-login-password --region $AWS_DEFAULT_REGION| docker login --username
 
 echo "docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO_NAME:$ECR_IMAGE_TAG"
 docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO_NAME:$ECR_IMAGE_TAG
-
+docker tag $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_REPO_NAME:$ECR_IMAGE_TAG $ECR_REPO_NAME:$ECR_IMAGE_TAG
 
 CONTAINER=$(docker ps -f name=2048 -q)
 if [[ $(echo $CONTAINER | wc -m) > 1 ]]
